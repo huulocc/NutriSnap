@@ -1,3 +1,52 @@
 <resources>
-    <string name="app_name">NutriSnap</string>
+    <string name="app_name">NutriSnap AI</string>
+    <string name="app_tagline">Chụp món ăn, biết dinh dưỡng</string>
+
+    <string name="login">Đăng nhập</string>
+    <string name="register">Đăng ký</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="confirm_password">Xác nhận mật khẩu</string>
+    <string name="full_name">Họ và tên</string>
+    <string name="no_account">Chưa có tài khoản? Đăng ký</string>
+    <string name="have_account">Đã có tài khoản? Đăng nhập</string>
+    <string name="welcome_back">Chào mừng trở lại</string>
+    <string name="create_account">Tạo tài khoản mới</string>
+
+    <string name="hello_user">Xin chào,</string>
+    <string name="today_summary">Tổng quan hôm nay</string>
+    <string name="calories">Calo</string>
+    <string name="protein">Protein</string>
+    <string name="kcal">kcal</string>
+    <string name="gram">g</string>
+    <string name="scan_food">Chụp món ăn</string>
+    <string name="recent_meals">Bữa ăn gần đây</string>
+
+    <string name="take_photo">Chụp ảnh</string>
+    <string name="pick_gallery">Chọn từ thư viện</string>
+    <string name="scan_hint">Chụp hoặc chọn ảnh món ăn để nhận diện</string>
+    <string name="analyze">Nhận diện món ăn</string>
+
+    <string name="result_title">Kết quả nhận diện</string>
+    <string name="confidence">Độ tin cậy</string>
+    <string name="portion_size">Khẩu phần</string>
+    <string name="small">Nhỏ</string>
+    <string name="medium">Vừa</string>
+    <string name="large">Lớn</string>
+    <string name="extra_large">Rất lớn</string>
+    <string name="save_meal">Lưu bữa ăn</string>
+
+    <string name="meal_log">Nhật ký bữa ăn</string>
+    <string name="todays_meals">Bữa ăn hôm nay</string>
+
+    <string name="profile">Hồ sơ</string>
+    <string name="height">Chiều cao (cm)</string>
+    <string name="weight">Cân nặng (kg)</string>
+    <string name="bmi">Chỉ số BMI</string>
+    <string name="save">Lưu</string>
+
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_log">Nhật ký</string>
+    <string name="nav_profile">Hồ sơ</string>
 </resources>
