@@ -5,11 +5,16 @@ public class Meal {
     public String portion;
     public String calories;
     public String protein;
+    public String imageUrl;
 
-    public Meal(String name, String portion, String calories, String protein) {
+    public Meal() {
+    }
+
+    public Meal(String name, String portion, String calories, String protein, String imageUrl) {
         this.name = name;
         this.portion = portion;
         this.calories = calories;
         this.protein = protein;
+        this.imageUrl = imageUrl;
     }
 }

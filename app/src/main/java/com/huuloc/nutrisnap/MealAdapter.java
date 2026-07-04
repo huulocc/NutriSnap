@@ -3,10 +3,13 @@ package com.huuloc.nutrisnap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -33,6 +36,16 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.MealHolder> {
         holder.portion.setText(meal.portion);
         holder.calories.setText(meal.calories);
         holder.protein.setText(meal.protein);
+
+        if (meal.imageUrl != null && !meal.imageUrl.isEmpty()) {
+            Glide.with(holder.itemView.getContext())
+                    .load(meal.imageUrl)
+                    .placeholder(R.drawable.ic_leaf)
+                    .error(R.drawable.ic_leaf)
+                    .into(holder.image);
+        } else {
+            holder.image.setImageResource(R.drawable.ic_leaf);
+        }
     }
 
     @Override
@@ -45,6 +58,7 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.MealHolder> {
         TextView portion;
         TextView calories;
         TextView protein;
+        ImageView image;
 
         MealHolder(@NonNull View itemView) {
             super(itemView);
@@ -52,6 +66,7 @@ public class MealAdapter extends RecyclerView.Adapter<MealAdapter.MealHolder> {
             portion = itemView.findViewById(R.id.txtMealPortion);
             calories = itemView.findViewById(R.id.txtMealCalories);
             protein = itemView.findViewById(R.id.txtMealProtein);
+            image = itemView.findViewById(R.id.imgMeal);
         }
     }
 }

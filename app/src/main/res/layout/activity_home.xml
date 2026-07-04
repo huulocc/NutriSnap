@@ -92,96 +92,112 @@
                         android:layout_marginTop="16dp"
                         android:orientation="horizontal">
 
+                        <!-- Calories -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
+                            android:gravity="center"
+                            android:orientation="vertical">
 
                             <FrameLayout
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:background="@drawable/bg_circle_icon">
-
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
-                                    android:layout_gravity="center"
-                                    android:src="@drawable/ic_fire" />
-                            </FrameLayout>
-
-                            <LinearLayout
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/txtCalories"
+                                android:layout_height="wrap_content">
+                                
+                                <com.google.android.material.progressindicator.CircularProgressIndicator
+                                    android:id="@+id/progressCalories"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="1250"
-                                    android:textColor="@color/calories"
-                                    android:textSize="22sp"
-                                    android:textStyle="bold" />
-
-                                <TextView
+                                    app:indicatorColor="@color/calories"
+                                    app:trackColor="#EEEEEE"
+                                    app:indicatorSize="100dp"
+                                    app:trackThickness="8dp"
+                                    android:max="2000"
+                                    android:progress="0" />
+                                    
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/calories"
-                                    android:textColor="@color/text_secondary"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+                                    
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_fire" />
+                                        
+                                    <TextView
+                                        android:id="@+id/txtCalories"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0/2000"
+                                        android:textColor="@color/calories"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+                                        
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/kcal"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/text_secondary" />
+                                </LinearLayout>
+                            </FrameLayout>
                         </LinearLayout>
 
-                        <View
-                            android:layout_width="1dp"
-                            android:layout_height="44dp"
-                            android:background="@color/card_stroke" />
-
+                        <!-- Protein -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:paddingStart="16dp">
+                            android:gravity="center"
+                            android:orientation="vertical">
 
                             <FrameLayout
-                                android:layout_width="44dp"
-                                android:layout_height="44dp"
-                                android:background="@drawable/bg_circle_icon">
-
-                                <ImageView
-                                    android:layout_width="24dp"
-                                    android:layout_height="24dp"
-                                    android:layout_gravity="center"
-                                    android:src="@drawable/ic_protein" />
-                            </FrameLayout>
-
-                            <LinearLayout
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:id="@+id/txtProtein"
+                                android:layout_height="wrap_content">
+                                
+                                <com.google.android.material.progressindicator.CircularProgressIndicator
+                                    android:id="@+id/progressProtein"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="68 g"
-                                    android:textColor="@color/protein"
-                                    android:textSize="22sp"
-                                    android:textStyle="bold" />
-
-                                <TextView
+                                    app:indicatorColor="@color/protein"
+                                    app:trackColor="#EEEEEE"
+                                    app:indicatorSize="100dp"
+                                    app:trackThickness="8dp"
+                                    android:max="100"
+                                    android:progress="0" />
+                                    
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/protein"
-                                    android:textColor="@color/text_secondary"
-                                    android:textSize="13sp" />
-                            </LinearLayout>
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+                                    
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="24dp"
+                                        android:src="@drawable/ic_protein" />
+                                        
+                                    <TextView
+                                        android:id="@+id/txtProtein"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0/100"
+                                        android:textColor="@color/protein"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+                                        
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/gram"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/text_secondary" />
+                                </LinearLayout>
+                            </FrameLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -198,6 +214,7 @@
                 app:icon="@drawable/ic_camera"
                 app:iconGravity="textStart"
                 app:iconTint="@color/white" />
+
 
             <TextView
                 android:layout_width="wrap_content"
