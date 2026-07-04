@@ -45,6 +45,15 @@
     <string name="weight">Cân nặng (kg)</string>
     <string name="bmi">Chỉ số BMI</string>
     <string name="save">Lưu</string>
+    <string name="personal_info">Thông tin cá nhân</string>
+    <string name="gender">Giới tính</string>
+    <string name="male">Nam</string>
+    <string name="female">Nữ</string>
+    <string name="age">Tuổi</string>
+    <string name="activity_level">Mức độ vận động</string>
+    <string name="daily_goal">Mục tiêu hàng ngày</string>
+    <string name="kcal_per_day">kcal / ngày</string>
+    <string name="protein_per_day">g protein / ngày</string>
 
     <string name="nav_home">Trang chủ</string>
     <string name="nav_log">Nhật ký</string>

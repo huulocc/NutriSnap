@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activity_levels">
+        <item>Ít vận động (ngồi nhiều)</item>
+        <item>Nhẹ (tập 1-3 ngày/tuần)</item>
+        <item>Vừa (tập 3-5 ngày/tuần)</item>
+        <item>Nặng (tập 6-7 ngày/tuần)</item>
+    </string-array>
+</resources>
