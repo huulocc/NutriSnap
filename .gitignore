@@ -11,6 +11,9 @@ local.properties
 Thumbs.db
 *.bak
 *.swp
+__pycache__/
+.pytest_cache/
+ai_training/.venv/
 
 # Android Studio generated files and folders
 captures/
@@ -36,3 +39,35 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# AI training data and generated artifacts
+ai_training/data/raw/*
+ai_training/data/processed/*
+ai_training/data/source/*
+ai_training/data/downloads/*
+!ai_training/data/raw/.gitkeep
+!ai_training/data/processed/.gitkeep
+!ai_training/data/source/.gitkeep
+!ai_training/data/downloads/.gitkeep
+ai_training/outputs/checkpoints/*
+ai_training/outputs/logs/*
+ai_training/outputs/plots/*
+ai_training/outputs/reports/*
+ai_training/outputs/runs/*
+ai_training/outputs/evaluations/*
+ai_training/outputs/tflite/*
+!ai_training/outputs/checkpoints/.gitkeep
+!ai_training/outputs/logs/.gitkeep
+!ai_training/outputs/plots/.gitkeep
+!ai_training/outputs/reports/.gitkeep
+!ai_training/outputs/runs/.gitkeep
+!ai_training/outputs/tflite/.gitkeep
+*.keras
+*.h5
+*.tflite
+
+# AI service local runtime and secrets
+ai_service/.env.production
+ai_service/.venv/
+ai_service/logs/
+ai_service/run/

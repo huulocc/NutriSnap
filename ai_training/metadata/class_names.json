@@ -1,0 +1,62 @@
+{
+  "0": {
+    "model_label": "pho",
+    "display_name": "Phở"
+  },
+  "1": {
+    "model_label": "banh_mi",
+    "display_name": "Bánh mì"
+  },
+  "2": {
+    "model_label": "com_tam",
+    "display_name": "Cơm tấm"
+  },
+  "3": {
+    "model_label": "bun_bo_hue",
+    "display_name": "Bún bò Huế"
+  },
+  "4": {
+    "model_label": "goi_cuon",
+    "display_name": "Gỏi cuốn"
+  },
+  "5": {
+    "model_label": "banh_xeo",
+    "display_name": "Bánh xèo"
+  },
+  "6": {
+    "model_label": "mi_quang",
+    "display_name": "Mì Quảng"
+  },
+  "7": {
+    "model_label": "xoi_xeo",
+    "display_name": "Xôi xéo"
+  },
+  "8": {
+    "model_label": "chao_long",
+    "display_name": "Cháo lòng"
+  },
+  "9": {
+    "model_label": "bun_thit_nuong",
+    "display_name": "Bún thịt nướng"
+  },
+  "10": {
+    "model_label": "bun_rieu",
+    "display_name": "Bún riêu"
+  },
+  "11": {
+    "model_label": "hu_tieu",
+    "display_name": "Hủ tiếu"
+  },
+  "12": {
+    "model_label": "banh_cuon",
+    "display_name": "Bánh cuốn"
+  },
+  "13": {
+    "model_label": "banh_trang_nuong",
+    "display_name": "Bánh tráng nướng"
+  },
+  "14": {
+    "model_label": "cao_lau",
+    "display_name": "Cao lầu"
+  }
+}

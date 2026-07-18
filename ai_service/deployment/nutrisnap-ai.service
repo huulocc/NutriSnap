@@ -1,0 +1,24 @@
+[Unit]
+Description=NutriSnap AI Inference Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=quyhv
+Group=quyhv
+WorkingDirectory=/data/quyhv/data/NutriSnap
+Environment=CUDA_VISIBLE_DEVICES=0
+Environment=TF_CPP_MIN_LOG_LEVEL=1
+EnvironmentFile=/data/quyhv/data/NutriSnap/ai_service/.env.production
+ExecStart=/data/quyhv/data/NutriSnap/ai_service/.venv/bin/uvicorn ai_service.app.main:app --host 0.0.0.0 --port 8000 --workers 1
+Restart=always
+RestartSec=5
+TimeoutStartSec=180
+TimeoutStopSec=30
+KillSignal=SIGTERM
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

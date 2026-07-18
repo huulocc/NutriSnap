@@ -1,0 +1,12 @@
+hostname=host-01
+private_ip=172.16.64.21
+ssh_ip=103.130.211.150
+candidate_external_ip=103.130.211.150
+listen_host=0.0.0.0
+listen_port=8000
+health_url_local=http://127.0.0.1:8000/health
+health_url_private=http://172.16.64.21:8000/health
+health_url_candidate_external=http://103.130.211.150:8000/health
+prediction_url_local=http://127.0.0.1:8000/predict
+prediction_url_candidate_external=http://103.130.211.150:8000/predict
+network_notes=Service listens on 0.0.0.0:8000 and is reachable locally and via private IP 172.16.64.21 from the server. Independent test from the Codex/local client to 103.130.211.150:8000 failed with connection refused. The public SSH IP likely needs NAT/provider firewall/security-group forwarding for TCP 8000 before outside clients can connect directly.

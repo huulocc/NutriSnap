@@ -1,0 +1,9 @@
+{
+  "request_id": "5d502935-67e5-4d67-820a-a2163cb84aa7",
+  "prediction": {
+    "class_index": 0,
+    "model_label": "pho",
+    "display_name": "Phở",
+    "confidence": 0.8722676634788513
+  }
+}
