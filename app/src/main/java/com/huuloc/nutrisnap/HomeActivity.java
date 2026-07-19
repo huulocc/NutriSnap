@@ -1,11 +1,17 @@
 package com.huuloc.nutrisnap;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -41,6 +47,10 @@ public class HomeActivity extends AppCompatActivity {
     private long currentCalories = 0;
     private long currentProtein = 0;
 
+    private final ActivityResultLauncher<String> notificationPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
+            });
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +77,7 @@ public class HomeActivity extends AppCompatActivity {
 
         loadUser();
         loadTodayMeals();
+        setupReminder();
 
         MaterialButton btnScan = findViewById(R.id.btnScan);
         btnScan.setOnClickListener(v ->
@@ -125,12 +136,21 @@ public class HomeActivity extends AppCompatActivity {
                 });
     }
 
+    private void setupReminder() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU
+                && ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                != PackageManager.PERMISSION_GRANTED) {
+            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+        }
+        ReminderScheduler.scheduleDaily(this);
+    }
+
     private void loadTodayMeals() {
+        String today = new SimpleDateFormat("yyyy-MM-dd", Locale.US).format(new Date());
         db.collection("users")
                 .document(currentUser.getUid())
                 .collection("mealLogs")
-                .orderBy("eatenAt", Query.Direction.DESCENDING)
-                .limit(10)
+                .whereEqualTo("dateKey", today)
                 .get()
                 .addOnSuccessListener(snapshot -> {
                     List<Meal> meals = new ArrayList<>();

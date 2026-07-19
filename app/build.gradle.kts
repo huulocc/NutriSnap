@@ -5,11 +5,7 @@
 
 android {
     namespace = "com.huuloc.nutrisnap"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.huuloc.nutrisnap"
